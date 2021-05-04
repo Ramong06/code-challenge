@@ -7,7 +7,8 @@ const BusinessesSchema = new Schema({
 	address: { type: String },
 	phoneNumber: { type: String },
 	website: { type: String },
-    image: { type: String },
+	image: { type: String },
+	message: { type: String },
     likeCount: {
 		type: Number,
 		default: 0

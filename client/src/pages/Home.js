@@ -1,5 +1,7 @@
 import React from 'react';
 import { Container, AppBar, Typography, Grow, Grid } from "@material-ui/core";
+import BusinessPosts from "../components/BusinessPosts/BusinessPosts";
+import BusinessForm from "../components/BusinessForm/BusinessForm";
 import business from "../images/real-estate.png";
 
 
@@ -10,6 +12,18 @@ const Home = () => {
                 <Typography variant="h2" align="center">Businesses</Typography>
                 <img src={business} alt="businesses" height="250" />
             </AppBar>
+            <Grow in>
+                <Container>
+                    <Grid container justify="space-between" alignItems="stretch" spacing={3}>
+                        <Grid item xs={12} sm={7}>
+                            <BusinessPosts />
+                        </Grid>
+                        <Grid item xs={12} sm={4}>
+                            <BusinessForm />
+                        </Grid>
+                    </Grid>
+                </Container>
+            </Grow>
         </Container>
     )
 }

@@ -5,7 +5,7 @@ import API from "../utils/API";
 import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../components/Grid";
 import { List, ListItem } from "../components/List";
-import { Input, FormBtn } from "../components/Form";
+import Map from "../components/Map";
 
 const Home = () => {
   // Setting our component's initial state
@@ -63,19 +63,7 @@ const Home = () => {
             <Jumbotron>
               <h1>Look Up A Business</h1>
             </Jumbotron>
-            <form>
-              <Input
-                onChange={handleInputChange}
-                name="business"
-                placeholder="Business Name (required)"
-              />
-              <FormBtn
-                // disabled={!(formObject.businessName)}
-                onClick={handleFormSubmit}
-              >
-                Add Business
-              </FormBtn>
-            </form>
+            <Map />
           </Col>
           <Col size="md-6 sm-12">
             <Jumbotron>

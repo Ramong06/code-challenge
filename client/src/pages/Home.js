@@ -10,7 +10,6 @@ import Map from "../components/Map";
 const Home = () => {
   // Setting our component's initial state
     const [businesses, setBusinesses] = useState([]);
-    const [formObject, setFormObject] = useState({});
 
   // Load all businesses and stores them with setBusinesses
   useEffect(() => {
@@ -32,36 +31,13 @@ const Home = () => {
       .then(res => loadBusinesses())
       .catch(err => console.log(err));
   }
-
-  // Handles updating component state for the input FORM when the user types into the input field for every key stroke
-  const handleInputChange = (event) => {
-    const { name, value } = event.target;
-    setFormObject({...formObject, [name]: value})
-  };
-
-  // When the form is submitted, use the API.saveBook method to save the book data
-  // Then reload books from the database
-  const handleFormSubmit = (event) => {
-    event.preventDefault();
-    if (formObject.businessName) {
-      API.saveBusiness({
-        businessName: formObject.name,
-        // address: formObject.address,
-        // phoneNumber: formObject.phoneNumber,
-        // website: formObject.website,
-        // image: formObject.image
-      })
-        .then(res => loadBusinesses())
-        .catch(err => console.log(err));
-    }
-  };
-
+    
     return (
       <Container fluid>
         <Row>
           <Col size="md-6">
             <Jumbotron>
-              <h1>Look Up A Business</h1>
+              <h1>Search For A Business Location</h1>
             </Jumbotron>
             <Map />
           </Col>

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { GoogleApiWrapper, Map, Marker } from "google-maps-react";
 import PlacesAutocomplete from "react-places-autocomplete";
-import { geocodeByAddress, geocodeByPlaceId, getLatLng } from "react-places-autocomplete";
+import { geocodeByAddress, getLatLng } from "react-places-autocomplete";
 
 class MapContainer extends Component {
     constructor(props) {
@@ -76,6 +76,7 @@ class MapContainer extends Component {
                 )}
             </PlacesAutocomplete>
               <Map
+                style={{width: '100%', height: '59%', position: 'relative'}}
                 zoom={15}
                 google={this.props.google}
                 initialCenter={{

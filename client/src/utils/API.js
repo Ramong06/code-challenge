@@ -5,11 +5,11 @@ export default {
   getBusinesses: function() {
     return axios.get("/api/businesses");
   },
-  // Gets the book with the given id
+  // Gets the book by it's id
   getBusiness: function(id) {
     return axios.get("/api/businesses" + id);
   },
-  // Deletes the book with the given id
+  // Deletes the book by it's id
   deleteBusiness: function(id) {
     return axios.delete("/api/businesses/" + id);
   },

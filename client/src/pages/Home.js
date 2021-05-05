@@ -8,15 +8,14 @@ import { List, ListItem } from "../components/List";
 import Map from "../components/Map";
 
 const Home = () => {
-  // Setting our component's initial state
     const [businesses, setBusinesses] = useState([]);
 
-  // Load all businesses and stores them with setBusinesses
+  // use useEffect here to Load businesses and store them with setBusinesses
   useEffect(() => {
     loadBusinesses()
   }, [])
 
-  // Loads all businesses and sets them to businesses
+  // not working.  not setting searched business
   const loadBusinesses = () => {
     API.getBusinesses()
       .then(res => 
@@ -25,7 +24,6 @@ const Home = () => {
       .catch(err => console.log(err));
   };
 
-    // Deletes a book from the database with a given id, then reloads books from the db
   function deleteBusiness(id) {
     API.deleteBusiness(id)
       .then(res => loadBusinesses())

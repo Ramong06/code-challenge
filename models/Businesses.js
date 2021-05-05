@@ -8,8 +8,7 @@ const BusinessesSchema = new Schema({
 	phoneNumber: { type: String },
 	website: { type: String },
 	image: { type: String },
-	message: { type: String },
-    likeCount: {
+	likeCount: {
 		type: Number,
 		default: 0
 	}

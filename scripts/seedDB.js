@@ -3,8 +3,6 @@ let db = require('../models');
 
 mongoose.connect(
     "mongodb+srv://ramon5406:Achilles54@businesses.ri0rv.mongodb.net/businesses?retryWrites=true&w=majority" || "mongodb://localhost/businesses", {
-	// useNewUrlParser: true,
-	// useFindAndModify: false,
 });
 
 let businessSeed = [

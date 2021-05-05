@@ -1,3 +1,3 @@
 module.exports = {
-	Businesses: require('./Businesses'),
+	Businesses: require('./businesses'),
 };

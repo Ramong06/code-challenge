@@ -1,17 +1,25 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./pages/Home";
-import RatingPage from "./pages/RatingPage";
+import Details from "./pages/Details";
+import NoMatch from "./pages/NoMatch";
+import Nav from "./components/Nav";
 
-
-
-function App() {
+const App = () => {
   return (
     <Router>
       <div>
+        <Nav />
         <Switch>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/RatingPage" component={RatingPage} />
+          <Route exact path={["/", "/businesses"]}>
+            <Home />
+          </Route>
+          <Route exact path="/businesses/:id">
+            <Details />
+          </Route>
+          <Route>
+            <NoMatch />
+          </Route>
         </Switch>
       </div>
     </Router>

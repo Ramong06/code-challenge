@@ -1,8 +1,7 @@
 require("dotenv").config();
 const express = require("express");
-// const secure = require("ssl-express-www");
 const mongoose = require("mongoose");
-const apiRoutes = require("./routes/api.js");
+const apiRoutes = require("./routes");
 
 const CONNECTION_URL = "mongodb+srv://ramon5406:Achilles54@businesses.ri0rv.mongodb.net/businesses?retryWrites=true&w=majority" || "mongodb://localhost/businesses";
 
